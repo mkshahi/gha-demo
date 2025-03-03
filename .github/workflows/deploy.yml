@@ -1,7 +1,7 @@
 # This is a basic workflow to help you get started with Actions
 
 name: My first action
-on: push, workflow-dispatch
+on: push, workflow_dispatch
 jobs:
  order_oneline:
    runs-on: ubuntu-latest
