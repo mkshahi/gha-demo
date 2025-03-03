@@ -1,0 +1,11 @@
+# This is a basic workflow to help you get started with Actions
+
+name: My first action
+on: push 
+jobs:
+ firstjob:
+   runs-on: ubuntu
+   steps:
+   - name: Print greetings
+     run: echo hello world 
+
