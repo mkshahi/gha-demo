@@ -4,7 +4,7 @@ name: My first action
 on: push 
 jobs:
  firstjob:
-   runs-on: ubuntu
+   runs-on: ubuntu:latest
    steps:
    - name: Print greetings
      run: echo hello world 
