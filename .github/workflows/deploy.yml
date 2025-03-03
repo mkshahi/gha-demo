@@ -10,5 +10,12 @@ jobs:
      run: echo mobile opened 
    - name: make payment
      run: echo " I made a payment of 500rs"
+ eat food:
+  runs-on: ubuntu-latest
+  steps:
+  - name: open mouth
+    run: echo "opened mouth"
+  - name : eat food
+    run: echo " I am eating food"
     
 
