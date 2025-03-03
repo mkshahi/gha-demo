@@ -1,11 +1,11 @@
 # This is a basic workflow to help you get started with Actions
 
 name: My first action
-on: workflow_dispatch
+on: push
 jobs:
- firstjob:
+ order_oneline:
    runs-on: ubuntu-latest
    steps:
-   - name: Print greetings
-     run: echo hello world 
+   - name: open mobile
+     run: echo mobile opened 
 
