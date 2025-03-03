@@ -8,4 +8,7 @@ jobs:
    steps:
    - name: open mobile
      run: echo mobile opened 
+   - name: make payment
+     run: echo " I made a payment of 500rs"
+    
 
