@@ -12,6 +12,7 @@ jobs:
      run: echo " I made a payment of 500rs"
  eat_food:
   runs-on: ubuntu-latest
+  needs: order_oneline
   steps:
   - name: open mouth
     run: echo "opened mouth"
