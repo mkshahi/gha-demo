@@ -70,7 +70,11 @@ jobs:
       uses: tale/kubectl-action@v1
       with:
         base64-kube-config: ${{ secrets.KUBE_CONFIG }}
-    - run: kubectl get pods
+    - run: |
+       kubectl apply -f deployment-service.yaml -n webapps
+       kubectl get svc -n webapps
+       
+          
    
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 #    - name: Update dependency graph
