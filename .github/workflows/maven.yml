@@ -38,6 +38,11 @@ jobs:
     - name: Trivy FS scan
       run: |
        trivy fs --format table -o trivy_report.html .
+    - name: sonarqube scan
+      uses: sonarsource/sonarqube-scan-action@master
+      env:
+       SONAR_TOKEN= ${{ sonar_token}}
+       SONAR_HOST_URL=${{ sonar_host }}
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 #    - name: Update dependency graph
