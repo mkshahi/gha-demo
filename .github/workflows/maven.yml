@@ -66,6 +66,11 @@ jobs:
     - name: Push Docker image
       run: |
           docker push mkshahi/my-docker-image:$GITHUB_SHA
+    - name: kubectl action
+      uses: tale/kubectl-action@v1
+      with:
+        base64-kube-config: ${{ secrets.KUBE_CONFIG }}
+    - run: kubectl get pods
    
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 #    - name: Update dependency graph
