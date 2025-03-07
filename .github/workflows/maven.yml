@@ -35,6 +35,9 @@ jobs:
       with:
         name: board-game
         path: target/*.jar
+    - name: Trivy FS scan
+      run: |
+       trivy fs --format table -o trivy_report.html .
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 #    - name: Update dependency graph
