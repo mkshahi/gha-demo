@@ -4,7 +4,7 @@ name: My first action
 on: [push, workflow_dispatch]
 jobs:
  order_oneline:
-   runs-on: ubuntu-latest
+   runs-on: self-hosted
    steps:
    - name: open mobile
      run: echo mobile opened 
