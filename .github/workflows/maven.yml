@@ -61,11 +61,11 @@ jobs:
 
     - name: Build Docker image
       run: |
-          docker build -t my-docker-image:$GITHUB_SHA .
+          docker build -t mkshahi/my-docker-image:$GITHUB_SHA .
         
     - name: Push Docker image
       run: |
-          docker push my-docker-image:$GITHUB_SHA
+          docker push mkshahi/my-docker-image:$GITHUB_SHA
    
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 #    - name: Update dependency graph
